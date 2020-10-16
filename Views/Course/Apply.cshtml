@@ -1,0 +1,37 @@
+﻿@model Student
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Course Register</title>
+</head>
+<body>
+<div asp-validation-summary="All"></div>
+<form asp-action="apply" method="post">
+    <p>
+        <label asp-for="name"></label>
+        <input type="text" asp-for="name">
+    </p>
+    <p>
+        <label asp-for="mail"></label>
+        <input type="text" asp-for="mail">
+    </p>
+    <p>
+        <label asp-for="phone"></label>
+        <input type="text" asp-for="phone">
+    </p>
+    <p>
+        <label asp-for="confirm">Kursa Katılacakmısınız</label>
+        <select asp-for="confirm">
+            <option value="">Seçiniz</option>
+            <option value="true">Evet Katılıyorum</option>
+            <option value="false">Hayır Katılmıyorum</option>
+        </select>
+    </p>
+    <button type="submit">Gönder</button>
+</form>
+</body>
+</html>

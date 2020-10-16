@@ -1,0 +1,29 @@
+﻿@model Student
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+             <title>Thanks</title>
+</head>
+<body>
+    <h2>Merhaba @Model.name</h2>
+    <hr>
+    @if (Model.confirm == true)
+    {
+        <span>
+            Kursa katıldığınız için teşekkür ederiz.
+        </span>     
+        <div>
+            Diğer katılımcıları <a asp-action="List">görüntüle</a>
+        </div>
+    }
+    else
+    {
+        <span>
+           Üzüldük , umarız fikriniz değişir.
+        </span>    
+    }
+</body>
+</html>
